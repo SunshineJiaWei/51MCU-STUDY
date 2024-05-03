@@ -47,6 +47,6 @@ void MatrixLED_ShowColumn(unsigned char Column, Data)
 	_74HC595_WriteByte(Data);				//位选，数据通过74HC595寄存器，哪一位为1，则那一行的LED亮
 	MATRIX_LED_PORT = ~(0x80 >> Column);	//段选，P0哪一位为0，则LED那一列就亮
 	
-	Delay(0.1);								// 消影
+	Delay(1);								// 消影
 	MATRIX_LED_PORT = 0xFF; 				// P0口数据清0,段选位选完后，将段选清0
 }

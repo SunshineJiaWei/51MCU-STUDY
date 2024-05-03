@@ -1,0 +1,35 @@
+#include <REGX52.H>
+#include "Delay.h"
+#include "MatrixLED.h"
+
+unsigned char code Animation[] = { // code的作用是将动画数据放入flash中存储
+	0xFF,0x08,0x08,0x08,0xFF,0x00,0x0E,0x15,
+	0x15,0x15,0x08,0x00,0xFF,0x00,0xFF,0x00,
+	0x0E,0x11,0x11,0x11,0x0E,0x00,0xFD,0x00,
+	0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+};
+
+void main()
+{
+	unsigned char i = 0, offset = 0, count = 0;
+	MatrixLED_Init();
+	
+	while(1)
+	{
+		for(i = 0;i < 8;i++)
+		{
+			MatrixLED_ShowColumn(i, Animation[i + offset]);
+			count++;
+			if(count > 50)
+			{
+				offset++;
+				count = 0;
+				if(offset > 24)
+				{
+					offset = 0;
+				}
+			}
+		}
+	
+	}
+}   

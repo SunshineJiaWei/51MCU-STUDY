@@ -2,18 +2,9 @@
 #include "Delay.h"
 #include "MatrixLED.h"
 
-sbit RCK = P3^5;	// RCLK
-sbit SCK = P3^6;	// SRCLK
-sbit SER = P3^4;	// SER
-
-#define MATRIX_LED_PORT		P0
-
-
-
 void main()
 {
-	SER = 0;
-	RCK = 0;
+	MatrixLED_Init();
 	
 	while(1)
 	{
