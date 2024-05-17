@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.7.0   MATRIXLED                                                         05/03/2024 17:47:42 PAGE 1   
+C51 COMPILER V9.60.7.0   MATRIXLED                                                         05/03/2024 17:57:36 PAGE 1   
 
 
 C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MATRIXLED
@@ -62,7 +62,7 @@ line level    source
   51   1              MATRIX_LED_PORT = 0xFF;                                 // P0口数据清0,段选位选完后，将段选清0
   52   1      }
 
-C51 COMPILER V9.60.7.0   MATRIXLED                                                         05/03/2024 17:47:42 PAGE 2   
+C51 COMPILER V9.60.7.0   MATRIXLED                                                         05/03/2024 17:57:36 PAGE 2   
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
