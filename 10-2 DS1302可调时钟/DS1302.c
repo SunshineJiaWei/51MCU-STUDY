@@ -119,7 +119,7 @@ unsigned char DEC_TO_BCD(unsigned char DEC)
 void DS1302_SetTime()
 {
 	// 关闭写保护
-	DS1302_WriteByte(DS1302_WP,0x80); 
+	DS1302_WriteByte(DS1302_WP,0x00); 
 	DS1302_WriteByte(DS1302_YEAR,DEC_TO_BCD(DS1302_Time[0]));
 	DS1302_WriteByte(DS1302_MONTH,DEC_TO_BCD(DS1302_Time[1]));
 	DS1302_WriteByte(DS1302_DATE,DEC_TO_BCD(DS1302_Time[2]));
@@ -128,7 +128,7 @@ void DS1302_SetTime()
 	DS1302_WriteByte(DS1302_SECOND,DEC_TO_BCD(DS1302_Time[5]));
 	DS1302_WriteByte(DS1302_DAY,DEC_TO_BCD(DS1302_Time[6]));
 	//  打开写保护
-	//DS1302_WriteByte(DS1302_WP,0x00);
+	//DS1302_WriteByte(DS1302_WP,0x80);
 }
 
 /**
