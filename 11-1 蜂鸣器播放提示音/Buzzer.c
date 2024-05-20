@@ -28,6 +28,7 @@ void Buzzer_Time(unsigned int ms)
 	unsigned int i;
 	for(i = 0;i < ms * 2;i++)
 	{
+		// 每隔1ms可以翻转一次IO口电平
 		Buzzer = !Buzzer;
 		// 一个周期1ms，频率f = 1 / T = 1 / 1ms = 1000HZ
 		Buzzer_Delay500us();
