@@ -11,7 +11,7 @@ sbit Buzzer = P2^5;
 */
 void Buzzer_Delay500us()		//@11.0592MHz
 {
-	unsigned char i;
+	unsigned char i,j;
 
 	_nop_();
 	i = 227;
@@ -34,4 +34,3 @@ void Buzzer_Time(unsigned int ms)
 		Buzzer_Delay500us();
 	}
 }
-
